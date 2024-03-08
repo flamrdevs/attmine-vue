@@ -1,7 +1,8 @@
 import setupCore from "@klass/core/setup";
 import type { Config } from "@klass/core/setup";
 import setupCoreGroup from "@klass/core/group/setup";
-import setupVue from "@klass/vue/setup";
+import setupFramework from "@klass/vue/setup";
+import setupMonoFramework from "@klass/vue/mono/setup";
 
 import { twMerge } from "tailwind-merge";
 
@@ -15,7 +16,8 @@ const config: Config = {
 export const cn = (...classValues: ClassValue[]) => twMerge(clsx(classValues));
 
 export const [klass, reklass] = setupCore(config);
-export const [klassed, reklassed] = setupVue(config);
+export const [klassed, reklassed] = setupFramework(config);
+export const [mklassed, mreklassed] = setupMonoFramework(config);
 export const group = setupCoreGroup(config);
 
 export const CLASSES_PROPS = ["class", "classNames"] as const;

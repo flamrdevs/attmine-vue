@@ -1,6 +1,9 @@
-import { klassed } from "./../utils.ts";
+import type { VariantsOf } from "@klass/core";
+import { klass, klassed } from "./../utils.ts";
 
-export const Badge = klassed("span", {
+export type BadgeVariants = VariantsOf<typeof badgeVariants>;
+
+export const badgeVariants = klass({
   base: ["inline-flex items-center justify-center gap-2 select-none", "border"],
   variants: {
     color: {
@@ -18,5 +21,7 @@ export const Badge = klassed("span", {
     size: "md",
   },
 });
+
+export const Badge = klassed("span", badgeVariants);
 
 if (import.meta.env.DEV) Badge.displayName = "Badge";
