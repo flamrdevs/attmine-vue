@@ -19,8 +19,8 @@
   },
   "dependencies": {
     "@ark-ui/vue": "^0.11.0",
-    "@klass/core": "4.0.0-next.22",
-    "@klass/vue": "4.0.0-next.22",
+    "@klass/core": "4.0.0-next.26",
+    "@klass/vue": "4.0.0-next.26",
     "@nanostores/persistent": "^0.10.1",
     "@nanostores/vue": "^0.10.0",
     "clsx": "^2.1.0",
